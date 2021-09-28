@@ -31,6 +31,7 @@ select {
   justify-content: center;
 }
 
+/* BACK */
 .Card {
   width: 90px;
   height: 90px;
@@ -70,6 +71,7 @@ select {
   }
 }
 
+/* FRONT */
 .Card.active {
   transform: rotateY(0deg);
 }

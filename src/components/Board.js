@@ -10,6 +10,13 @@ const Board = () => {
 
     div.className = 'Board';
     duplicateData.forEach(eachPokemon => div.appendChild(Cards(eachPokemon)));
+    duplicateData.document.querySelectorAll('.Card');
+
+    function flipCard() {
+        this.classList.toggle('flip');
+    }
+
+    duplicateData.forEach(Cards => Cards.addEventListener('click', flipCard));
 
     return div;
 };
