@@ -8,6 +8,7 @@ const duplicateData = pokemonArray.concat(pokemonArray);
 const Board = () => {
     let selectedItems = [];
     let arrayIdx = [];
+    let counter = 0;
     
     const div = document.createElement('div');
 
@@ -30,6 +31,10 @@ const Board = () => {
         elementB.style.pointerEvents = 'none';
         selectedItems = [];
         arrayIdx = [];
+        counter += 1;
+        if (counter === 9) {
+            alert("You won!")
+        }
 }
         else if (selectedItems.length === 2 && selectedItems[0] !== selectedItems[1]){
             const elementA = document.querySelector(`[data-idx = '${arrayIdx[0]}']`)
