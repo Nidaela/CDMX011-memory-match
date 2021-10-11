@@ -1,5 +1,6 @@
 import data from '../data/pokemon/pokemon.js';
 import Cards from "./Cards.js";
+import shuffle from '../shuffle.js';
 
 const pokemonArray = data.items;
 const duplicateData = pokemonArray.concat(pokemonArray);
@@ -51,7 +52,8 @@ const Board = () => {
 }
 
    div.className = 'Board';
-   duplicateData.forEach((eachPokemon, index)  => div.appendChild(Cards(eachPokemon, flipCard, checkForMatch, index)));
+   const shuffleCards = shuffle(duplicateData)
+   shuffleCards.forEach((eachPokemon, index)  => div.appendChild(Cards(eachPokemon, flipCard, checkForMatch, index)));
     
    return div;
 };
